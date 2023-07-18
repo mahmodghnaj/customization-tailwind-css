@@ -1,0 +1,108 @@
+.toggle {
+  --tglbg: hsl(var(--b1));
+  --handleoffset: 1.5rem;
+  --handleoffsetcalculator: calc(var(--handleoffset) * -1);
+  --togglehandleborder: 0 0;
+  @apply h-6 w-12 cursor-pointer appearance-none border border-base-content border-opacity-20 bg-base-content bg-opacity-50 duration-300 ease-in-out rounded-badge;
+  box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset,
+    0 0 0 2px var(--tglbg) inset, var(--togglehandleborder);
+  &:checked,
+  &[checked="true"],
+  &[aria-checked="true"] {
+    --handleoffsetcalculator: var(--handleoffset);
+    @apply border-opacity-100 bg-opacity-100;
+  }
+
+  &-primary {
+    &:focus-visible {
+      @apply outline-primary;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-primary;
+      @apply border-primary border-opacity-10 bg-primary text-primary-content;
+    }
+  }
+  &-secondary {
+    &:focus-visible {
+      @apply outline-secondary;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-secondary;
+      @apply border-secondary border-opacity-10 bg-secondary text-secondary-content;
+    }
+  }
+  &-accent {
+    &:focus-visible {
+      @apply outline-accent;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-accent;
+      @apply border-accent border-opacity-10 bg-accent text-accent-content;
+    }
+  }
+  &-success {
+    &:focus-visible {
+      @apply outline-success;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-success;
+      @apply border-success border-opacity-10 bg-success text-success-content;
+    }
+  }
+  &-warning {
+    &:focus-visible {
+      @apply outline-warning;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-warning;
+      @apply border-warning border-opacity-10 bg-warning text-warning-content;
+    }
+  }
+  &-info {
+    &:focus-visible {
+      @apply outline-info;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-info;
+      @apply border-info border-opacity-10 bg-info text-info-content;
+    }
+  }
+  &-error {
+    &:focus-visible {
+      @apply outline-error;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-error border-opacity-10 bg-error text-error-content;
+    }
+  }
+  &-xs {
+    --handleoffset: 0.5rem;
+    @apply h-4 w-6;
+  }
+  &-sm {
+    --handleoffset: 0.75rem;
+    @apply h-5 w-8;
+  }
+  &-md {
+    --handleoffset: 1.5rem;
+    @apply h-6 w-12;
+  }
+  &-lg {
+    --handleoffset: 2rem;
+    @apply h-8 w-16;
+  }
+}

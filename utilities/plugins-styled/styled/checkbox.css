@@ -1,0 +1,132 @@
+.checkbox {
+  --chkbg: var(--bc);
+  --chkfg: var(--b1);
+  @apply h-6 w-6 cursor-pointer appearance-none border border-base-content border-opacity-20 rounded-btn;
+  &:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-base-content;
+  }
+  &:checked,
+  &[checked="true"],
+  &[aria-checked="true"] {
+    @apply bg-base-content bg-no-repeat;
+    animation: checkmark var(--animation-input, 0.2s) ease-in-out;
+    background-image: linear-gradient(
+        -45deg,
+        transparent 65%,
+        hsl(var(--chkbg)) 65.99%
+      ),
+      linear-gradient(45deg, transparent 75%, hsl(var(--chkbg)) 75.99%),
+      linear-gradient(-45deg, hsl(var(--chkbg)) 40%, transparent 40.99%),
+      linear-gradient(
+        45deg,
+        hsl(var(--chkbg)) 30%,
+        hsl(var(--chkfg)) 30.99%,
+        hsl(var(--chkfg)) 40%,
+        transparent 40.99%
+      ),
+      linear-gradient(-45deg, hsl(var(--chkfg)) 50%, hsl(var(--chkbg)) 50.99%);
+  }
+  &-primary {
+    --chkbg: var(--p);
+    --chkfg: var(--pc);
+    @apply border-primary [@media(hover:hover)]:hover:border-primary;
+    &:focus-visible {
+      @apply outline-primary;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-primary bg-primary text-primary-content;
+    }
+  }
+  &-secondary {
+    --chkbg: var(--s);
+    --chkfg: var(--sc);
+    @apply border-secondary [@media(hover:hover)]:hover:border-secondary;
+    &:focus-visible {
+      @apply outline-secondary;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-secondary bg-secondary text-secondary-content;
+    }
+  }
+  &-accent {
+    --chkbg: var(--a);
+    --chkfg: var(--ac);
+    @apply border-accent [@media(hover:hover)]:hover:border-accent;
+    &:focus-visible {
+      @apply outline-accent;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-accent bg-accent text-accent-content;
+    }
+  }
+  &-success {
+    --chkbg: var(--su);
+    --chkfg: var(--suc);
+    @apply border-success [@media(hover:hover)]:hover:border-success;
+    &:focus-visible {
+      @apply outline-success;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-success bg-success text-success-content;
+    }
+  }
+  &-warning {
+    --chkbg: var(--wa);
+    --chkfg: var(--wac);
+    @apply border-warning [@media(hover:hover)]:hover:border-warning;
+    &:focus-visible {
+      @apply outline-warning;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-warning bg-warning text-warning-content;
+    }
+  }
+  &-info {
+    --chkbg: var(--in);
+    --chkfg: var(--inc);
+    @apply border-info [@media(hover:hover)]:hover:border-info;
+    &:focus-visible {
+      @apply outline-info;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-info bg-info text-info-content;
+    }
+  }
+  &-error {
+    --chkbg: var(--er);
+    --chkfg: var(--erc);
+    @apply border-error [@media(hover:hover)]:hover:border-error;
+    &:focus-visible {
+      @apply outline-error;
+    }
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      @apply border-error bg-error text-error-content;
+    }
+  }
+  &-xs {
+    @apply h-4 w-4;
+  }
+  &-sm {
+    @apply h-5 w-5;
+  }
+  &-md {
+    @apply h-6 w-6;
+  }
+  &-lg {
+    @apply h-8 w-8;
+  }
+}

@@ -1,0 +1,10 @@
+html {
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+}
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: 100%;
+}

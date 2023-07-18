@@ -1,0 +1,25 @@
+.badge {
+  @apply border border-base-200 bg-base-100 text-base-content rounded-badge;
+  @apply inline-flex items-center justify-center transition duration-200 ease-in-out;
+  @apply h-5 text-sm leading-5;
+  width: fit-content;
+  padding-left: 0.563rem;
+  padding-right: 0.563rem;
+  @apply flex flex-col flex-wrap text-sm;
+  &-info {
+    @apply border-transparent bg-info text-info-content;
+  }
+  &-warning {
+    @apply border-transparent bg-warning text-warning-content;
+  }
+  &-xs {
+    @apply h-3 text-xs leading-3;
+    padding-left: 0.313rem;
+    padding-right: 0.313rem;
+  }
+  &-sm {
+    @apply h-4 text-xs leading-4;
+    padding-left: 0.438rem;
+    padding-right: 0.438rem;
+  }
+}

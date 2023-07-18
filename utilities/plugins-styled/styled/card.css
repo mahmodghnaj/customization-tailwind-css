@@ -1,0 +1,24 @@
+.card {
+  @apply relative flex flex-col;
+  &:focus {
+    @apply outline-none;
+  }
+  &-title {
+    @apply flex items-center gap-2 text-xl font-semibold;
+  }
+  &-body {
+    @apply flex flex-col gap-2;
+    :where(p) {
+      @apply flex-grow;
+    }
+    padding: var(--padding-card, 2rem);
+  }
+  @apply rounded-box;
+  :where(figure:first-child) {
+    @apply overflow-hidden;
+    border-start-start-radius: inherit;
+    border-start-end-radius: inherit;
+    border-end-start-radius: unset;
+    border-end-end-radius: unset;
+  }
+}
