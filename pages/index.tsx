@@ -10,11 +10,14 @@ export default function Home() {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
+
     window.addEventListener("scroll", handleScroll);
+    setScrollY(1);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <main data-theme="dark">
       <div className="h-[1000vh] " ref={sectionRef}>
