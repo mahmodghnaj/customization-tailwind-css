@@ -18,7 +18,7 @@ Customization is a Next.js project template that empowers web developers to effo
 
 To get started with Customization in Next.js, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/Customization.git`
+1. Clone the repository: `git clone https://github.com/mahmodghnaj/customization-tailwind-css.git`
 
 2. Install dependencies: `npm install` or `yarn install`
 
