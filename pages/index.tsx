@@ -16,7 +16,7 @@ export default function Home() {
     };
   }, []);
   return (
-    <main>
+    <main data-theme="dark">
       <div className="h-[1000vh] " ref={sectionRef}>
         <div
           style={{ transform: "scale(0.90)" }}
