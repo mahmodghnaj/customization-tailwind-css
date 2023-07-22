@@ -2,6 +2,7 @@ import ComponentsPreview from "@/components/components-preview";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { themes } from "../lib/data";
 import { animateValue } from "@/utilities/common/helper";
+import Head from "next/head";
 
 export default function Home() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -19,7 +20,10 @@ export default function Home() {
   }, []);
 
   return (
-    <main data-theme="dark">
+    <main>
+      <Head>
+        <title>Customization With Tailwind Css</title>
+      </Head>
       <div className="h-[1000vh] " ref={sectionRef}>
         <div
           style={{ transform: "scale(0.90)" }}
